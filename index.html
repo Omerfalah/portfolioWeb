@@ -254,6 +254,40 @@
             from, to { border-color: transparent }
             50% { border-color: #0f0 }
         }
+
+        .glitch-char {
+  display: inline-block;
+  position: relative;
+  color: #0f0;
+  font-family: inherit;
+  text-shadow: 0 0 2px #0f0;
+  animation: glitch-flicker 1s infinite;
+}
+
+@keyframes glitch-flicker {
+  0%, 100% {
+    opacity: 1;
+    transform: none;
+  }
+  10% {
+    transform: scale(1.05) translateX(1px);
+    opacity: 0.8;
+  }
+  20% {
+    transform: translateY(-1px) rotate(-1deg);
+    opacity: 0.6;
+  }
+  30% {
+    transform: translate(-1px, 1px) rotate(1deg);
+    opacity: 0.9;
+  }
+  40% {
+    transform: translate(1px, -1px) scale(0.95);
+    opacity: 1;
+  }
+}
+
+
     </style>
 </head>
 <body>
@@ -265,7 +299,7 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
-                    <a href="#home" class="text-2xl font-bold text-green-500 glow-text">>Omer_Matrix_Portfolio<span class="cursor">_</span></a>
+                    <a href="#home" class="text-2xl font-bold text-green-500 glow-text">>Omer_Portfolio<span class="cursor">_</span></a>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
@@ -295,281 +329,239 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="section flex items-center justify-center relative overflow-hidden">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 terminal">
-                    <h1 class="text-4xl md:text-6xl font-bold text-green-500 mb-4 glow-text typewriter">>Hello_World<span class="cursor">_</span></h1>
-                    <h2 class="text-2xl md:text-3xl font-semibold text-green-400 mb-6">>I_am_Omer<span class="cursor">_</span></h2>
-                    <p class="text-green-300 mb-8">>Computer_Science_Student<span class="cursor">_</span></p>
-                    <div class="flex space-x-4">
-                        <a href="#projects" class="btn-matrix px-6 py-3 rounded-lg font-medium">>view_my_work<span class="cursor">_</span></a>
-                        <a href="#about" class="btn-matrix-alt px-6 py-3 rounded-lg font-medium">>about_me<span class="cursor">_</span></a>
-                    </div>
-                </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <div class="terminal p-4 relative">
-                        <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                             alt="Developer working" 
-                             class="rounded-lg w-64 h-64 md:w-80 md:h-80 object-cover floating border border-green-500">
-                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-green-400 p-2 text-center">
-                            >user@matrix:~$<span class="cursor">_</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section id="home" class="section flex items-center justify-center min-h-screen text-center">
+    <div class="w-full px-4 sm:px-6 lg:px-8 flex justify-center">
+      <div class="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 terminal">
+        <h1 class="text-4xl md:text-6xl font-bold text-green-500 mb-4 glow-text typewriter">>Hello_World<span class="cursor">_</span></h1>
+        <h2 class="text-2xl md:text-3xl font-semibold text-green-400 mb-6">>I_am_Omer<span class="cursor">_</span></h2>
+        <p class="text-green-300 mb-8">>Aspiring_Software_Engineer<span class="cursor">_</span></p>
+
+        <div class="flex justify-center space-x-4">
+            <a href="#about" class="btn-matrix-alt px-6 py-3 rounded-lg font-medium">>about_me<span class="cursor">_</span></a>
+          <a href="#projects" class="btn-matrix px-6 py-3 rounded-lg font-medium">>view_my_work<span class="cursor">_</span></a>
         </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down text-2xl"></i>
-        </div>
-    </section>
+      </div>
+    </div>
+    <div class="scroll-indicator absolute bottom-6 w-full flex justify-center">
+      <i class="fas fa-chevron-down text-2xl"></i>
+    </div>
+  </section>
+  
 
     <!-- About Section -->
-    <section id="about" class="section">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-green-500 mb-4 glow-text">>about_me<span class="cursor">_</span></h2>
-                <div class="w-20 h-1 bg-green-500 mx-auto glow-box"></div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
-                    <div class="terminal p-4 relative">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                             alt="Profile" 
-                             class="rounded-lg w-48 h-48 md:w-64 md:h-64 object-cover border border-green-500">
-                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-green-400 p-2 text-center">
-                            >profile_image.jpg<span class="cursor">_</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-2/3 md:pl-12 terminal">
-                    <h3 class="text-2xl font-semibold text-green-400 mb-4">>who_am_i?<span class="cursor">_</span></h3>
-                    <p class="text-green-300 mb-6 leading-relaxed">
-                        >I'm_a_Computer_Science_student_at_the_University_of_Ottawa,_specializing_in_Data_Science_and_minoring_in_Life_Science._My_background_includes_web_development,_data_analysis,_and_full-stack_projects_that_combine_clean_design_with_functional_code.<span class="cursor">_</span>
-                    </p>
-                    
-                    <p class="text-green-300 mb-8 leading-relaxed">
-                        >When_I'm_not_writing_code_or_debugging_something_late_at_night,_I_love_spending_time_outdoors_hiking_new_trails_and_capturing_nature_through_my_camera._I'm_also_an_avid_reader,_especially_of_historical_fiction.<span class="cursor">_</span>
-                    </p>
-                    
-                    <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="flex items-center">
-                            <i class="fas fa-code text-green-500 mr-3 text-xl"></i>
-                            <span class="text-green-300">>web_development<span class="cursor">_</span></span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-paint-brush text-green-500 mr-3 text-xl"></i>
-                            <span class="text-green-300">>ui/ux_design<span class="cursor">_</span></span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-mobile-alt text-green-500 mr-3 text-xl"></i>
-                            <span class="text-green-300">>software_dev<span class="cursor">_</span></span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-chart-line text-green-500 mr-3 text-xl"></i>
-                            <span class="text-green-300">>data_science<span class="cursor">_</span></span>
-                        </div>
-                    </div>
-                    
-                    <a href="#experience" class="inline-flex items-center text-green-500 hover:text-green-300 font-medium">
-                        >view_my_experience_<i class="fas fa-arrow-right ml-2"></i><span class="cursor">_</span>
-                    </a>
-                </div>
-            </div>
+<section id="about" class="section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-500 mb-4 glow-text">>about_me<span class="cursor">_</span></h2>
+        <div class="w-20 h-1 bg-green-500 mx-auto glow-box"></div>
+      </div>
+  
+      <div class="flex flex-col md:flex-row items-start gap-6">
+        <div class="terminal p-6 w-full md:w-1/3 flex justify-center items-center">
+          <img src="profile_pic.PNG" 
+               alt="Profile" 
+               class="rounded-lg w-48 h-48 md:w-64 md:h-64 object-cover border border-green-500">
         </div>
-    </section>
+  
+        <div class="terminal p-6 w-full md:w-2/3">
+          <h3 class="text-2xl font-semibold text-green-400 mb-4">>who_am_i?<span class="cursor">_</span></h3>
+          <p class="text-green-300 mb-6 leading-relaxed break-words">
+            >I'm a Computer Science student at the University of Ottawa, specializing in Data Science and minoring in Life Science. My background includes web development, data analysis, and full-stack projects that combine clean design with functional code.<span class="cursor"></span>
+          </p>
+        
+          <p class="text-green-300 mb-8 leading-relaxed break-words">
+            >When I'm not writing code or debugging something late at night, I love spending time outdoors hiking new trails and capturing nature through my camera. I'm also an avid reader, especially of historical fiction.<span class="cursor"></span>
+          </p>
+  
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="flex items-center">
+              <i class="fas fa-code text-green-500 mr-3 text-xl"></i>
+              <span class="text-green-300">>web_development<span class="cursor">_</span></span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-paint-brush text-green-500 mr-3 text-xl"></i>
+              <span class="text-green-300">>ui/ux_design<span class="cursor">_</span></span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-mobile-alt text-green-500 mr-3 text-xl"></i>
+              <span class="text-green-300">>software_dev<span class="cursor">_</span></span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-chart-line text-green-500 mr-3 text-xl"></i>
+              <span class="text-green-300">>data_science<span class="cursor">_</span></span>
+            </div>
+          </div>
+  
+          <a href="#experience" class="inline-flex items-center text-green-500 hover:text-green-300 font-medium">
+            >view_my_experience_<i class="fas fa-arrow-right ml-2"></i><span class="cursor">_</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
     <!-- Experience Section -->
-    <section id="experience" class="section bg-black bg-opacity-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-green-500 mb-4 glow-text">>my_experience<span class="cursor">_</span></h2>
-                <div class="w-20 h-1 bg-green-500 mx-auto glow-box"></div>
+<section id="experience" class="section bg-black bg-opacity-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-500 mb-4 glow-text">>my_experience<span class="cursor">_</span></h2>
+        <div class="w-20 h-1 bg-green-500 mx-auto glow-box"></div>
+      </div>
+  
+      <div class="max-w-3xl mx-auto">
+        
+        <!-- MoVA Realities Inc -->
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="fas fa-chart-line"></i></div>
+          <div class="terminal p-6">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="text-xl font-semibold text-green-400">>data_market_analyst<span class="cursor">_</span></h3>
+                <p class="text-green-500 font-medium">>MoVA Realities Inc — Toronto, ON<span class="cursor">_</span></p>
+              </div>
+              <span class="bg-green-900 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded">Nov–Dec 2024</span>
             </div>
-            
-            <div class="max-w-3xl mx-auto">
-                <!-- UI/UX Coursework -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"><i class="fas fa-laptop-code"></i></div>
-                    <div class="terminal p-6">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="text-xl font-semibold text-green-400">>ui/ux_design_course<span class="cursor">_</span></h3>
-                                <p class="text-green-500 font-medium">>University_of_Ottawa_-_SEG3125<span class="cursor">_</span></p>
-                            </div>
-                            <span class="bg-green-900 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded">2025</span>
-                        </div>
-                        <p class="mt-3 text-green-300">
-                            >Currently_learning_the_foundations_of_user_interface_and_user_experience_design,_including_visual_communication,_user-centered_design,_and_heuristic_evaluation._Projects_focus_on_applying_layout,_color,_typography,_and_accessibility_principles_through_HTML,_CSS,_JavaScript.<span class="cursor">_</span>
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Development -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"><i class="fas fa-folder-open"></i></div>
-                    <div class="terminal p-6">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="text-xl font-semibold text-green-400">>portfolio_website<span class="cursor">_</span></h3>
-                                <p class="text-green-500 font-medium">>personal_project<span class="cursor">_</span></p>
-                            </div>
-                            <span class="bg-green-900 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded">May_2025</span>
-                        </div>
-                        <p class="mt-3 text-green-300">
-                            >I_built_this_portfolio_site_as_a_way_to_explore_and_apply_the_UI/UX_design_concepts_I've_been_learning_in_SEG_3125._I_focused_on_creating_something_clean,_responsive,_and_easy_to_navigate_all_while_experimenting_with_layout,_color,_and_spacing_using_CSS.<span class="cursor">_</span>
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Heuristic Evaluation Practice -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"><i class="fas fa-search"></i></div>
-                    <div class="terminal p-6">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="text-xl font-semibold text-green-400">>heuristic_evaluation<span class="cursor">_</span></h3>
-                                <p class="text-green-500 font-medium">>still_in_progress<span class="cursor">_</span></p>
-                            </div>
-                            <span class="bg-green-900 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded">2025</span>
-                        </div>
-                        <p class="mt-3 text-green-300">
-                            >As_part_of_my_ongoing_coursework,_I_will_soon_be_engaging_in_usability_testing_and_heuristic_evaluations_of_peer-designed_interfaces._I_look_forward_to_developing_a_critical_eye_for_design_and_learning_how_to_provide_constructive,_research-based_feedback_that_improves_user_experiences.<span class="cursor">_</span>
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Design Prototyping -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"><i class="fas fa-pencil-ruler"></i></div>
-                    <div class="terminal p-6">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="text-xl font-semibold text-green-400">>ui_prototyping<span class="cursor">_</span></h3>
-                                <p class="text-green-500 font-medium">>still_in_progress<span class="cursor">_</span></p>
-                            </div>
-                            <span class="bg-green-900 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded">2025</span>
-                        </div>
-                        <p class="mt-3 text-green-300">
-                            >I'm_currently_learning_how_to_design_both_low-fidelity_and_high-fidelity_wireframes_to_better_understand_layout_structures_and_interaction_flows._By_incorporating_feedback_from_instructors_and_peers,_I'm_gradually_improving_my_ability_to_iterate_on_designs_and_apply_design_thinking_principles_in_a_practical,_hands-on_way.<span class="cursor">_</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <ul class="mt-3 text-green-300 leading-relaxed list-disc list-inside space-y-2">
+              <li>Conducted research across 10+ data sources to identify trends and consumer preferences, increasing targeted engagement.</li>
+              <li>Built interactive Power BI dashboards to visualize performance metrics and support decision-making.</li>
+              <li>Optimized marketing strategies, improving ROI by 25% and lowering acquisition costs.</li>
+            </ul>
+          </div>
         </div>
-    </section>
+  
+        <!-- Ottawa Designers -->
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="fas fa-code"></i></div>
+          <div class="terminal p-6">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="text-xl font-semibold text-green-400">>web_developer<span class="cursor">_</span></h3>
+                <p class="text-green-500 font-medium">>Ottawa Designers — Ottawa, ON<span class="cursor">_</span></p>
+              </div>
+              <span class="bg-green-900 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded">May–Aug 2023</span>
+            </div>
+            <ul class="mt-3 text-green-300 leading-relaxed list-disc list-inside space-y-2">
+              <li>Developed and optimized web applications using HTML, CSS, JavaScript, and React.js.</li>
+              <li>Conducted UI testing across devices and browsers to ensure responsiveness and visual consistency.</li>
+              <li>Implemented client-requested React.js features for 50+ users, improving satisfaction and engagement.</li>
+            </ul>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  <!--Projects-->
+  <section id="projects" class="section">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-500 mb-4 glow-text">>my_projects<span class="cursor">_</span></h2>
+        <div class="w-20 h-1 bg-green-500 mx-auto glow-box"></div>
+      </div>
+  
+      <div class="relative overflow-hidden rounded-xl border border-green-500">
+        <div id="carousel" class="flex transition-transform duration-700 ease-in-out w-full">
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-green-500 mb-4 glow-text">>my_projects<span class="cursor">_</span></h2>
-                <div class="w-20 h-1 bg-green-500 mx-auto glow-box"></div>
+            <!-- Clone of last (finance tracker) -->
+            <div class="w-full flex-shrink-0 p-8 bg-black text-green-300 terminal min-h-[400px] flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-green-400 mb-1 glow-text">>finance_tracker<span class="cursor">_</span></h3>
+              <p class="text-green-500 text-sm mb-2">>Technologies: Chart.js, MySQL, HTML, CSS, JS</p>
+              <p class="text-green-500 text-sm mb-2">>Date: April 2025</p>
+              <p class="mt-4 leading-relaxed">
+                >Developed a responsive financial tracking platform with real-time visualizations. Used Chart.js to display user expenses and income. Data was stored and retrieved from a MySQL database.<span class="cursor">_</span>
+              </p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Project 1: Service Site -->
-                <a href="service.html" class="project-card block rounded-xl overflow-hidden transition duration-300 relative group">
-                    <div class="relative overflow-hidden h-64">
-                        <img src="https://images.unsplash.com/photo-1606312618573-bb4c1fbbba30?auto=format&fit=crop&w=800&q=80" 
-                             alt="Service Site" 
-                             class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 p-6">
-                            <h3 class="text-xl font-bold text-green-400 mb-2 glow-text">>service_site<span class="cursor">_</span></h3>
-                            <p class="text-green-300">>coming_soon:_service_website_ui<span class="cursor">_</span></p>
-                        </div>
-                    </div>
-                    <div class="absolute top-0 left-0 right-0 h-1 bg-green-500 group-hover:bg-green-300 transition-colors"></div>
-                </a>
-                
-                <!-- Project 2: Game -->
-                <a href="game.html" class="project-card block rounded-xl overflow-hidden transition duration-300 relative group">
-                    <div class="relative overflow-hidden h-64">
-                        <img src="https://images.unsplash.com/photo-1610563166153-4f3bcd5f11e1?auto=format&fit=crop&w=800&q=80" 
-                             alt="Game" 
-                             class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 p-6">
-                            <h3 class="text-xl font-bold text-green-400 mb-2 glow-text">>mini_game<span class="cursor">_</span></h3>
-                            <p class="text-green-300">>coming_soon:_a_small_web-based_game<span class="cursor">_</span></p>
-                        </div>
-                    </div>
-                    <div class="absolute top-0 left-0 right-0 h-1 bg-green-500 group-hover:bg-green-300 transition-colors"></div>
-                </a>
-                
-                <!-- Project 3: E-Commerce -->
-                <a href="ecommerce.html" class="project-card block rounded-xl overflow-hidden transition duration-300 relative group">
-                    <div class="relative overflow-hidden h-64">
-                        <img src="https://images.unsplash.com/photo-1556742031-c6961e8560b0?auto=format&fit=crop&w=800&q=80" 
-                             alt="E-Commerce" 
-                             class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 p-6">
-                            <h3 class="text-xl font-bold text-green-400 mb-2 glow-text">>e-commerce_site<span class="cursor">_</span></h3>
-                            <p class="text-green-300">>coming_soon:_online_storefront_design<span class="cursor">_</span></p>
-                        </div>
-                    </div>
-                    <div class="absolute top-0 left-0 right-0 h-1 bg-green-500 group-hover:bg-green-300 transition-colors"></div>
-                </a>
-                
-                <!-- Project 4: Analytics -->
-                <a href="analytics.html" class="project-card block rounded-xl overflow-hidden transition duration-300 relative group">
-                    <div class="relative overflow-hidden h-64">
-                        <img src="https://images.unsplash.com/photo-1581091215367-42e61f38e3b9?auto=format&fit=crop&w=800&q=80" 
-                             alt="Analytics Dashboard" 
-                             class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 p-6">
-                            <h3 class="text-xl font-bold text-green-400 mb-2 glow-text">>analytics_dashboard<span class="cursor">_</span></h3>
-                            <p class="text-green-300">>coming_soon:_data_visualization_&_insights<span class="cursor">_</span></p>
-                        </div>
-                    </div>
-                    <div class="absolute top-0 left-0 right-0 h-1 bg-green-500 group-hover:bg-green-300 transition-colors"></div>
-                </a>
+          
+            <!-- Slide 1 -->
+            <div class="w-full flex-shrink-0 p-8 bg-black text-green-300 terminal min-h-[400px] flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-green-400 mb-1 glow-text">>ai_face_recognizer<span class="cursor">_</span></h3>
+              <p class="text-green-500 text-sm mb-2">>Technologies: Python, OpenCV, Haar Cascades</p>
+              <p class="text-green-500 text-sm mb-2">>Date: March 2025</p>
+              <p class="mt-4 leading-relaxed">
+                >Built a real-time face and eye recognition system. Integrated OpenCV with Haar Cascade classifiers to identify facial features, with preprocessing steps for improved detection accuracy.<span class="cursor">_</span>
+              </p>
             </div>
-            
-            <div class="text-center mt-16 terminal p-4">
-                <p class="text-green-300">>more_project_updates_will_be_added_throughout_the_semester.<span class="cursor">_</span></p>
+          
+            <!-- Slide 2 -->
+            <div class="w-full flex-shrink-0 p-8 bg-black text-green-300 terminal min-h-[400px] flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-green-400 mb-1 glow-text">>chat_server_system<span class="cursor">_</span></h3>
+              <p class="text-green-500 text-sm mb-2">>Technologies: Java, Sockets, Threads</p>
+              <p class="text-green-500 text-sm mb-2">>Date: Feb 2025</p>
+              <p class="mt-4 leading-relaxed">
+                >Created a multi-client chat system in Java using socket programming. Implemented thread-safe handling of multiple users and added authentication for secure login.<span class="cursor">_</span>
+              </p>
             </div>
-        </div>
-    </section>
+          
+            <!-- Slide 3 (finance tracker again) -->
+            <div class="w-full flex-shrink-0 p-8 bg-black text-green-300 terminal min-h-[400px] flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-green-400 mb-1 glow-text">>finance_tracker<span class="cursor">_</span></h3>
+              <p class="text-green-500 text-sm mb-2">>Technologies: Chart.js, MySQL, HTML, CSS, JS</p>
+              <p class="text-green-500 text-sm mb-2">>Date: April 2025</p>
+              <p class="mt-4 leading-relaxed">
+                >Developed a responsive financial tracking platform with real-time visualizations. Used Chart.js to display user expenses and income. Data was stored and retrieved from a MySQL database.<span class="cursor">_</span>
+              </p>
+            </div>
+          
+            <!-- Clone of first (ai recognizer) -->
+            <div class="w-full flex-shrink-0 p-8 bg-black text-green-300 terminal min-h-[400px] flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-green-400 mb-1 glow-text">>ai_face_recognizer<span class="cursor">_</span></h3>
+              <p class="text-green-500 text-sm mb-2">>Technologies: Python, OpenCV, Haar Cascades</p>
+              <p class="text-green-500 text-sm mb-2">>Date: March 2025</p>
+              <p class="mt-4 leading-relaxed">
+                >Built a real-time face and eye recognition system. Integrated OpenCV with Haar Cascade classifiers to identify facial features, with preprocessing steps for improved detection accuracy.<span class="cursor">_</span>
+              </p>
+            </div>
+          
+          </div>
+          
+  
+        <!-- Arrows -->
+        <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 p-3 bg-green-500 bg-opacity-20 hover:bg-opacity-40 text-green-300 rounded-full z-10">
+          <i class="fas fa-chevron-left text-xl"></i>
+        </button>
+        <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 p-3 bg-green-500 bg-opacity-20 hover:bg-opacity-40 text-green-300 rounded-full z-10">
+          <i class="fas fa-chevron-right text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+  
 
     <!-- Footer -->
-    <footer class="bg-black bg-opacity-90 text-green-400 py-12 border-t border-green-500">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="terminal p-4">
-                    <h3 class="text-xl font-bold mb-4 text-green-500">>portfolio<span class="cursor">_</span></h3>
-                    <p class="text-green-300">
-                        >creating_digital_experiences_that_make_an_impact._follow_me_on_my_developer_journey.<span class="cursor">_</span>
-                    </p>
-                </div>
-                <div class="terminal p-4">
-                    <h3 class="text-xl font-bold mb-4 text-green-500">>quick_links<span class="cursor">_</span></h3>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-green-300 hover:text-green-500 transition duration-300">>home<span class="cursor">_</span></a></li>
-                        <li><a href="#about" class="text-green-300 hover:text-green-500 transition duration-300">>about<span class="cursor">_</span></a></li>
-                        <li><a href="#experience" class="text-green-300 hover:text-green-500 transition duration-300">>experience<span class="cursor">_</span></a></li>
-                        <li><a href="#projects" class="text-green-300 hover:text-green-500 transition duration-300">>projects<span class="cursor">_</span></a></li>
-                    </ul>
-                </div>
-                <div class="terminal p-4">
-                    <h3 class="text-xl font-bold mb-4 text-green-500">>connect<span class="cursor">_</span></h3>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/omerfalah" target="_blank" class="text-green-300 hover:text-green-500 text-2xl transition duration-300" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/omer-falah-90796426b" target="_blank" class="text-green-300 hover:text-green-500 text-2xl transition duration-300" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                    <p class="text-green-300 mt-4">>omer.rawi@gmail.com<span class="cursor">_</span></p>
-                </div>
-            </div>
+<footer class="bg-black bg-opacity-90 text-green-400 py-12 border-t border-green-500">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center justify-center text-center space-y-8 md:space-y-0 md:flex-row md:justify-center md:items-stretch md:space-x-12">
+        
+        <!-- Quick Links -->
+        <div class="terminal p-6 w-full md:w-[400px] flex flex-col justify-between">
+          <h3 class="text-xl font-bold mb-4 text-green-500">>quick_links<span class="cursor">_</span></h3>
+          <ul class="space-y-2 mb-auto">
+            <li><a href="#home" class="text-green-300 hover:text-green-500 transition duration-300">>home<span class="cursor">_</span></a></li>
+            <li><a href="#about" class="text-green-300 hover:text-green-500 transition duration-300">>about<span class="cursor">_</span></a></li>
+            <li><a href="#experience" class="text-green-300 hover:text-green-500 transition duration-300">>experience<span class="cursor">_</span></a></li>
+            <li><a href="#projects" class="text-green-300 hover:text-green-500 transition duration-300">>projects<span class="cursor">_</span></a></li>
+          </ul>
         </div>
-    </footer>
+  
+        <!-- Connect -->
+        <div class="terminal p-6 w-full md:w-[400px] flex flex-col justify-between">
+          <h3 class="text-xl font-bold mb-4 text-green-500">>connect<span class="cursor">_</span></h3>
+          <div class="flex justify-center space-x-10 mb-4">
+            <a href="https://github.com/omerfalah" target="_blank" class="text-green-300 hover:text-green-500 text-2xl transition duration-300" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/omer-falah-90796426b" target="_blank" class="text-green-300 hover:text-green-500 text-2xl transition duration-300" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+          <p class="text-green-300 mt-auto">>omer.rawi@gmail.com<span class="cursor">_</span></p>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
 
     <script>
         // Mobile menu toggle
@@ -692,6 +684,60 @@
                 }, 10);
             });
         });
+
+        
+    
+  const carousel = document.getElementById('carousel');
+  const nextBtn = document.getElementById('next');
+  const prevBtn = document.getElementById('prev');
+  const slides = carousel.children;
+  const totalSlides = slides.length;
+  const slideWidth = slides[0].offsetWidth;
+
+  let index = 1;
+  let isTransitioning = false;
+
+  function goToSlide(i, smooth = true) {
+    if (smooth) carousel.style.transition = 'transform 0.6s ease-in-out';
+    else carousel.style.transition = 'none';
+
+    carousel.style.transform = `translateX(-${i * slideWidth}px)`;
+  }
+
+  function handleTransitionEnd() {
+    if (slides[index].innerHTML.includes('ai_face_recognizer') && index === totalSlides - 1) {
+      index = 1;
+      goToSlide(index, false);
+    }
+    if (slides[index].innerHTML.includes('finance_tracker') && index === 0) {
+      index = totalSlides - 2;
+      goToSlide(index, false);
+    }
+    isTransitioning = false;
+  }
+
+  carousel.addEventListener('transitionend', handleTransitionEnd);
+
+  nextBtn.addEventListener('click', () => {
+    if (isTransitioning) return;
+    index++;
+    isTransitioning = true;
+    goToSlide(index);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (isTransitioning) return;
+    index--;
+    isTransitioning = true;
+    goToSlide(index);
+  });
+
+  // Init
+  goToSlide(index, false);
+
+
     </script>
+
+    
 </body>
 </html>
