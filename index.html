@@ -255,37 +255,6 @@
             50% { border-color: #0f0 }
         }
 
-        .glitch-char {
-  display: inline-block;
-  position: relative;
-  color: #0f0;
-  font-family: inherit;
-  text-shadow: 0 0 2px #0f0;
-  animation: glitch-flicker 1s infinite;
-}
-
-@keyframes glitch-flicker {
-  0%, 100% {
-    opacity: 1;
-    transform: none;
-  }
-  10% {
-    transform: scale(1.05) translateX(1px);
-    opacity: 0.8;
-  }
-  20% {
-    transform: translateY(-1px) rotate(-1deg);
-    opacity: 0.6;
-  }
-  30% {
-    transform: translate(-1px, 1px) rotate(1deg);
-    opacity: 0.9;
-  }
-  40% {
-    transform: translate(1px, -1px) scale(0.95);
-    opacity: 1;
-  }
-}
 
 
     </style>
@@ -761,7 +730,7 @@
     goToSlide(index);
   });
 
-  // Init
+  
   goToSlide(index, false);
 
 
